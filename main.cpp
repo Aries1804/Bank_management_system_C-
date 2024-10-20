@@ -120,8 +120,7 @@ int main(){
         cout << "|  3. Deposit                      |\n";
         cout << "|  4. Withdraw                     |\n";
         cout << "|  5. Update                       |\n";
-        cout << "|  6. Find Account                 |\n";
-        cout << "|  7. Exit                         |\n";
+        cout << "|  6. Exit                         |\n";
         cout << "|----------------------------------|\n";
         cout << "Choice: "; cin >> Choice;
         
@@ -213,26 +212,7 @@ int main(){
                 }
                 break;
             }
-            case 6:{
-                Account->ClearScreen();
-                int Acc;
-                cout << "---- Find Account system ----\n";
-                cout << "Enter Your ID : ";
-                cin >> Acc;
-                bool found = false;
-                for (int i = 0; i < AccountCount; i++ ){
-                    if(Account[i].Search(Acc)){
-                        Account[i].ShowAccount();
-                        found = true;
-                    break;
-                    }
-                }
-                if(!found){
-                    cout << "Account not Found";
-                }
-                break;
-            }
-            case 7: {
+            case 6: {
                 cout << "\n\n\nExiting the system.\n\n";
                 cout << "Thank you for using our Bank system. \nHave a nice day!\n";
                 break;
